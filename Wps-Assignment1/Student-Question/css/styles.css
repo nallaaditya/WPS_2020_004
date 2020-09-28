@@ -1,11 +1,12 @@
 nav{
-    background-color: #0278ae;
+    background-color: #50b5e4d0;
+   
 }
 .heading{
     margin-left: 50px;
 }
 .select{
-    color: #212121;
+    color: 212121;
     font-size: large;
     font-weight: 600;
 }
@@ -24,8 +25,8 @@ nav{
         margin-left: 0px;
     }
     .select{
-        background-color: chocolate;
-        color: white;
+        background-color: #50b5e4d0;
+        color: #50b5e4d0;
         font-weight: 500;
     }
     .heading{
