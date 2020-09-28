@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Q2</title>
+</head>
+<body id="main">
+
+    <div class="container">
+        <div class="card-panel">
+            <div class="row">
+                <div class="col l4 m3 s2"></div>
+                <div class="col l4 m6 s8"><img id="image" alt="week day" width=100% ></div>
+                
+            </div>
+                <h1 id="day" style="margin-top: 50px; text-align: center;"></h1>
+        </div>
+    </div>
+    
+</body>
+<script>
+    window.onload= function greetings(){
+            var day=new Date();
+            var current_day=day.getDay();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            var week = new Array(7);
+            week[0] = "./images/"+"sunday.png";
+            week[1] = "./images/"+"monday.png";
+            week[2] = "./images/"+"tuesday.png";
+            week[3] = "./images/"+"wednesday.png";
+            week[4] = "./images/"+"thursday.png";
+            week[5] = "./images/"+"friday.png";
+            week[6] = "./images/"+"saturday.png";
+
+            
+            var rand_color = new Array(7);
+            rand_color[0] = "#FF0000";
+            rand_color[1] = "#FF7F00";
+            rand_color[2] = "#FFFF00";
+            rand_color[3] = "#00FF00";
+            rand_color[4] = " #0000FF";
+            rand_color[5] = "#2E2B5F";
+            rand_color[6] = "#8B00FF";
+
+
+            var num=Math.floor(Math.random() * 8);
+            document.getElementById('day').innerHTML=weekday[current_day]; 
+            document.getElementById('image').src=week[current_day]; 
+            document.getElementById('image').style.width="100px";
+            document.getElementById('image').style.height="100px";
+            document.getElementById('image').style.marginTop="40px";
+            document.getElementById('image').style.marginLeft="700px";
+            document.getElementById('main').style.setProperty('background-color',rand_color[num]);
+    }
+    </script>
+</script>
+</html>
