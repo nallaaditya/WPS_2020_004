@@ -16,12 +16,13 @@
      <link rel="stylesheet" href="./css/styles.css">
 
    
-    <title>Student Home</title>
+    <title>Academics</title>
   </head>
 <body>
   <section class="studentNavBar" >
       <nav class="nav-fixed">
           <div class="nav-wrapper">
+            <a href="#!" class="brand-logo" ><i class="large material-icons">assignment</i></a>
             <a href="#" class="brand-logo heading">Academic</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -47,34 +48,34 @@
   <section id="academicInfo">
       
     <div class="container">
-      <div class="card-panel">
+      <div class="card-panel" style="background-color: #1e5f74;">
           <a class="btn-floating btn-large waves-effect waves-light red right"  onclick="editAcademic()"><i class="material-icons">create</i></a>
-          <div class="center" style="margin-top: 50px;"><h4 class="heading">Academic Information</h4></div>
+          <div class="center" style="margin-top: 50px; color: white;"><h4 class="heading">Academic Information</h4></div>
         <div class="row">
           <div class="col l4 s2 m3"></div>
           <form class="col l4 s8 m9" id="academicForm">
             <div class="row">
               <div class="input-field col s12 m12">
-                <input id="branch" type="text" class="validate"  pattern="^[a-zA-Z ]{2,30}$" required>
-                <label for="branch">Branch Name</label>
+                <input id="branch" type="text" class="validate"  pattern="^[a-zA-Z ]{2,30}$" required style="color: yellow;">
+                <label for="branch" style="color: #fcdab7;">Branch Name</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12 m12">
-                <input id="section" type="text" class="validate" pattern="^[a-zA-Z ]{1}$" required>
-                <label for="section">Section</label>
+                <input id="section" type="text" class="validate" pattern="^[a-zA-Z ]{1}$" required style="color: yellow;">
+                <label for="section" style="color: #fcdab7;">Section</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12 m12">
-                <input id="rollNumber" type="text" class="validate" pattern="^[0-3][0-9]{2}$" required>
-                <label for="rollNumber">Roll Number last 3 digits</label>
+                <input id="rollNumber" type="text" class="validate" pattern="^1602[1-2][0-9]73[0-9][0-3][0-9]{2}$" required style="color: yellow;">
+                <label for="rollNumber" style="color: #fcdab7;">Roll Number</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12 m12">
-                <input id="cgp" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)" required>
-                <label for="cgp">Cgp</label>
+                <input id="cgp" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)" required style="color: yellow;">
+                <label for="cgp" style="color: #fcdab7;">CGPA</label>
               </div>
             </div>
             <div class="center">

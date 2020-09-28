@@ -16,12 +16,13 @@
      <link rel="stylesheet" href="./css/styles.css">
 
   
-    <title>Student Home</title>
+    <title>Proctor</title>
   </head>
 <body>
     <section class="studentNavBar" >
         <nav class="nav-fixed">
             <div class="nav-wrapper">
+              <a href="#!" class="brand-logo" ><i class="large material-icons">assignment_ind</i></a>
               <a href="#" class="brand-logo heading">Proctor</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -47,28 +48,28 @@
     <section id="proctorInfo">
       
       <div class="container">
-        <div class="card-panel">
+        <div class="card-panel" style="background-color: #1e5f74;">
           <a class="btn-floating btn-large waves-effect waves-light red right"  onclick="editProctor()"><i class="material-icons">create</i></a>
-            <div class="center" style="margin-top: 50px;"><h4 class="heading">Proctor Information</h4></div>
+            <div class="center" style="margin-top: 50px; color: white;"><h4 class="heading">Proctor Information</h4></div>
           <div class="row">
             <div class="col l4 s2 m3"></div>
             <form class="col l4 m9 s8" id="proctorForm">   
               <div class="row">
                 <div class="input-field col m12 s12">
-                  <input id="proctorName" type="text" class="validate" pattern="^[a-zA-Z ]{2,30}$" required>
-                  <label for="proctorName">Proctor Name</label>
+                  <input id="proctorName" type="text" class="validate" pattern="^[a-zA-Z ]{2,30}$" required style="color: yellow;">
+                  <label for="proctorName" style="color: #fcdab7;">Proctor Name</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col m12 s12">
-                  <input id="proctorEmail" type="email" class="validate" required>
-                  <label for="proctorEmail">Proctor Email</label>
+                  <input id="proctorEmail" type="email" class="validate" required style="color: yellow;">
+                  <label for="proctorEmail" style="color: #fcdab7;">Proctor Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12 m12">
-                  <input id="proctorPhone" type="tel" class="validate" pattern="^[6-9]{1}[0-9]{9}$" required>
-                  <label for="proctorPhone">Proctor Phone Number</label>
+                  <input id="proctorPhone" type="tel" class="validate" pattern="^[6-9]{1}[0-9]{9}$" required style="color: yellow;">
+                  <label for="proctorPhone" style="color: #fcdab7;">Proctor Phone Number</label>
                 </div>
               </div>
               <div class="center">

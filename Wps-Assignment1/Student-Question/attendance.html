@@ -16,12 +16,13 @@
      <link rel="stylesheet" href="./css/styles.css">
 
    
-    <title>Student Home</title>
+    <title>Attendance</title>
   </head>
 <body>
   <section class="studentNavBar" >
     <nav class="nav-fixed">
         <div class="nav-wrapper">
+          <a href="#!" class="brand-logo" ><i class="large material-icons">call_to_action</i></a>
           <a href="#" class="brand-logo heading">Attendance</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -46,35 +47,35 @@
 </section>
 <section id="attendanceInfo">
   <div class="container">
-    <div class="card-panel">
+    <div class="card-panel" style="background-color: #1e5f74;">
       <a class="btn-floating btn-large waves-effect waves-light red right"  onclick="editAttendance()"><i class="material-icons">create</i></a>
-        <div class="center" style="margin-top: 50px;"><h4 class="heading">Attendance Information</h4></div>
+        <div class="center" style="margin-top: 50px; color: white;"><h4 class="heading">Attendance Information</h4></div>
       <div class="row">
         <div class="col l4 s2 m3"></div>
         <form class="col l4 s8 m9" id="attendanceForm">
             
           <div class="row">
             <div class="input-field col s12 m12">
-              <input id="first" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
-              <label for="first">First year %</label>
+              <input id="first" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)" style="color: yellow;">
+              <label for="first" style="color: #fcdab7;">First year %</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m12">
-              <input id="second" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
-              <label for="second">Second Year %</label>
+              <input id="second" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)" style="color: yellow;">
+              <label for="second" style="color: #fcdab7;">Second Year %</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m12">
-              <input id="third" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
-              <label for="third">Third Year %</label>
+              <input id="third" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)" style="color: yellow;">
+              <label for="third" style="color: #fcdab7;">Third Year %</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m12">
-              <input id="fourth" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
-              <label for="fourth">Fourth Year %</label>
+              <input id="fourth" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)" style="color: yellow;">
+              <label for="fourth" style="color: #fcdab7;">Fourth Year %</label>
             </div>
           </div>
           <div class="center">
