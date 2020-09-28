@@ -15,9 +15,7 @@
      <!-- Custom CSS -->
      <link rel="stylesheet" href="./css/styles.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+  
     <title>Student Home</title>
   </head>
 <body>
@@ -46,6 +44,44 @@
             <li><a href="./view.html">View Details</a></li>
           </ul>
     </section>
+    <section id="proctorInfo">
+      
+      <div class="container">
+        <div class="card-panel">
+          <a class="btn-floating btn-large waves-effect waves-light red right"  onclick="editProctor()"><i class="material-icons">create</i></a>
+            <div class="center" style="margin-top: 50px;"><h4 class="heading">Proctor Information</h4></div>
+          <div class="row">
+            <div class="col l4 s2 m3"></div>
+            <form class="col l4 m9 s8" id="proctorForm">   
+              <div class="row">
+                <div class="input-field col m12 s12">
+                  <input id="proctorName" type="text" class="validate" pattern="^[a-zA-Z ]{2,30}$" required>
+                  <label for="proctorName">Proctor Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col m12 s12">
+                  <input id="proctorEmail" type="email" class="validate" required>
+                  <label for="proctorEmail">Proctor Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m12">
+                  <input id="proctorPhone" type="tel" class="validate" pattern="^[6-9]{1}[0-9]{9}$" required>
+                  <label for="proctorPhone">Proctor Phone Number</label>
+                </div>
+              </div>
+              <div class="center">
+                <button class="btn waves-effect waves-light" type="submit" id="submitButton" onclick="submitProcter()">Submit
+                  <i class="material-icons right">send</i>
+                  </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+  
   </body>
    <!-- from bootstrap java script -->
  <!-- j-query -->
@@ -58,6 +94,30 @@ crossorigin="anonymous"></script>
 
 <!-- custom Js for Side Navigation Mobile and other data  -->
 <script src="./_js/loader.js" >
+</script>
+
+<script>
+   function editProctor()
+        {
+            var obj=localStorage.getItem('proctorObj');
+            obj= JSON.parse(obj);
+            document.getElementById('proctorName').value =obj['pn'];
+            document.getElementById('proctorEmail').value =obj['pem'];
+            document.getElementById('proctorPhone').value =obj['pph'];
+            
+        }
+
+  function submitProcter()
+  {
+
+      var obj={
+                'pn':document.forms['proctorForm'].elements['proctorName'].value,
+                'pem':document.forms['proctorForm'].elements['proctorEmail'].value,
+                'pph':document.forms['proctorForm'].elements['proctorPhone'].value,
+       
+            }
+            localStorage.setItem('proctorObj',JSON.stringify(obj));
+  }
 </script>
 
   </html>

@@ -15,9 +15,7 @@
      <!-- Custom CSS -->
      <link rel="stylesheet" href="./css/styles.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+   
     <title>Student Home</title>
   </head>
 <body>
@@ -47,6 +45,156 @@
           </ul>
     </section>
 
+    <div class="container">
+      <div class="card-panel">
+          <div class="center" style="margin-top: 50px;"><h4 class="heading">Student Information</h4></div>
+          <div class="center">
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Student Name :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vSN"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Phone Number :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vSPN"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Email Id :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vSEI"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Address :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vSA"></h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="card-panel">
+          <div class="center" style="margin-top: 50px;"><h4 class="heading">Academic Information</h4></div>
+          <div class="center">
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Branch :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vB"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Section :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vS"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Roll Number :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vR"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>CGPA :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vC"></h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="card-panel">
+          <div class="center" style="margin-top: 50px;"><h4 class="heading">Proctor Information</h4></div>
+          <div class="center">
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Proctor Name :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vPN"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Proctor Phone :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vPP"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Proctor Email :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vPE"></h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="card-panel">
+          <div class="center" style="margin-top: 50px;"><h4 class="heading">Attendance Information</h4></div>
+          <div class="center">
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>First Year % :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vFY"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Second Year % :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vSY"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Third Year % :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vTY"></h5>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col l6 s6">
+                      <h5>Fourth Year % :</h5>
+                  </div>
+                  <div class="col l6 s6">
+                      <h5 id="vFOY"></h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
 
   </body>
 
@@ -63,4 +211,39 @@ crossorigin="anonymous"></script>
 <script src="./_js/loader.js" >
 </script>
 
+<script>
+ if(localStorage.getItem('studentObj')){
+            var student=localStorage.getItem('studentObj');
+            student= JSON.parse(student);
+            document.getElementById('vSN').innerHTML =student['sn'];
+            document.getElementById('vSEI').innerHTML =student['em'];
+            document.getElementById('vSPN').innerHTML =student['ph'];
+            document.getElementById('vSA').innerHTML =student['ad'];}
+
+            if(localStorage.getItem('academicObj')){
+            var academic=localStorage.getItem('academicObj');
+            academic= JSON.parse(academic);
+            document.getElementById('vB').innerHTML =academic['bra'];
+            document.getElementById('vS').innerHTML =academic['sec'];
+            document.getElementById('vR').innerHTML =academic['roll'];
+            document.getElementById('vC').innerHTML =academic['cgpA'];}
+
+            if(localStorage.getItem('proctorObj')){
+            var proctor=localStorage.getItem('proctorObj');
+            proctor= JSON.parse(proctor);
+            document.getElementById('vPN').innerHTML =proctor['pn'];
+            document.getElementById('vPE').innerHTML =proctor['pem'];
+            document.getElementById('vPP').innerHTML =proctor['pph'];}
+
+            if(localStorage.getItem('attendanceObj')){
+            var attendance=localStorage.getItem('attendanceObj');
+            attendance= JSON.parse(attendance);
+            document.getElementById('vFY').innerHTML =attendance['f'];
+            document.getElementById('vSY').innerHTML =attendance['s'];
+            document.getElementById('vTY').innerHTML =attendance['t'];
+            document.getElementById('vFOY').innerHTML =attendance['fo'];}
+            
+
+
+</script>
   </html>

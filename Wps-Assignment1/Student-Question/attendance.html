@@ -15,9 +15,7 @@
      <!-- Custom CSS -->
      <link rel="stylesheet" href="./css/styles.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+   
     <title>Student Home</title>
   </head>
 <body>
@@ -46,6 +44,50 @@
         <li><a href="./view.html">View Details</a></li>
       </ul>
 </section>
+<section id="attendanceInfo">
+  <div class="container">
+    <div class="card-panel">
+      <a class="btn-floating btn-large waves-effect waves-light red right"  onclick="editAttendance()"><i class="material-icons">create</i></a>
+        <div class="center" style="margin-top: 50px;"><h4 class="heading">Attendance Information</h4></div>
+      <div class="row">
+        <div class="col l4 s2 m3"></div>
+        <form class="col l4 s8 m9" id="attendanceForm">
+            
+          <div class="row">
+            <div class="input-field col s12 m12">
+              <input id="first" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
+              <label for="first">First year %</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m12">
+              <input id="second" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
+              <label for="second">Second Year %</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m12">
+              <input id="third" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
+              <label for="third">Third Year %</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m12">
+              <input id="fourth" type="text" class="validate" pattern="(^100(\.0{1,2})?$)|(^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$)">
+              <label for="fourth">Fourth Year %</label>
+            </div>
+          </div>
+          <div class="center">
+            <button class="btn waves-effect waves-light" type="submit" id="submitButton" onclick="submitAttendance()">Submit
+              <i class="material-icons right">send</i>
+              </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
   </body>
 
    <!-- from bootstrap java script -->
@@ -61,6 +103,30 @@ crossorigin="anonymous"></script>
 <script src="./_js/loader.js" >
 </script>
 
+<script>
+   function editAttendance()
+        {
+            var obj=localStorage.getItem('attendanceObj');
+            obj= JSON.parse(obj);
+            document.getElementById('first').value =obj['f'];
+            document.getElementById('second').value =obj['s'];
+            document.getElementById('third').value =obj['t'];
+            document.getElementById('fourth').value =obj['fo'];
+            
+        }
+
+  function submitAttendance()
+  {
+
+      var obj={
+        'f':document.forms['attendanceForm'].elements['first'].value,
+        's':document.forms['attendanceForm'].elements['second'].value,
+        't':document.forms['attendanceForm'].elements['third'].value,
+        'fo':document.forms['attendanceForm'].elements['fourth'].value,
+      }
+      localStorage.setItem('attendanceObj',JSON.stringify(obj));
+  }
+</script>
 
 
   </html>
