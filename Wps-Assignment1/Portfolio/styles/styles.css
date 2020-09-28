@@ -1,0 +1,63 @@
+body{
+    
+   position: relative;
+   
+}
+.topContainer{
+    height: 100px;
+    position: relative;
+    margin: 10px 40px 10px 40px;
+    top: 40px;
+    border-radius: 6px;
+    border: thick;
+
+}
+.profileImage{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 300px;
+    top: 80px;
+}
+.subTopContainer{
+    position: absolute;
+    right: 180px;
+    bottom: 10px;
+
+}
+.nameHeading{
+    color:white;
+    font-style: italic;
+    font-family: 'Niconne', cursive;
+    position:absolute;
+    left: 140px;
+    top: 4px;
+    font-size: 40px;
+}
+.anchorTags{
+    color: white; 
+    text-decoration-color:black; 
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: 'Niconne', cursive;
+    font-size: 25px;
+}
+.middleContainer{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    top: 60px;
+    left: 360px;
+    border-radius: 4px;
+    
+}
+.helloTextStyle{
+    font-family: 'Niconne', cursive;
+    color: white;
+    font-size: 45px;
+    align-self: center;
+    text-align: center;
+    margin-top: 150px;
+
+    
+}
