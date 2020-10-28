@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movies</title>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster+Two:ital,wght@1,700&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <style>
+       p {
+        font-family: 'Lobster Two', cursive;
+        font-size: xx-large;
+       }
+       .select{
+        color: #000000;
+        font-size: large;
+        font-weight: 600;
+       }
+     </style>
+
+</head>
+<body style="background-color: #12021b;">
+    <section>
+      
+        <div class="container">
+          <div class="card-panel">
+              <div class="center" style="margin-top: 50px;"><h4 class="heading">Add Movie</h4></div>
+            <div class="row">
+              <div class="col l4 s2 m3"></div>
+              <form class="col l4 m9 s8" method="post" action="add">   
+                <div class="row">
+                  <div class="input-field col m12 s12">
+                    <input id="movieName" type="text" class="validate" pattern="^[a-zA-Z ]{2,30}$" required  name="movieName">
+                    <label for="movieName">Movie Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col m12 s12">
+                    <input id="date" type="text" class="datepicker" required name="moviedate" placeholder="yyyy-mm-dd" value=""
+        min="1997-01-01" max="3030-12-31">
+                    <label for="date"><i class="material-icons">event</i></label>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m12 s12">
+                      <input id="theaters" type="text" class="validate" required name="theater">
+                      <label for="theaters">Theaters</label>
+                    </div>
+                  </div>
+                <div class="row">
+                    <div class="input-field col m12 s12">
+                      <input id="seats" type="text" class="validate" required name="seats">
+                      <label for="seats">No.of Seats</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col m12 s12">
+                      <input id="coast" type="text" class="validate" required name="coast">
+                      <label for="coast">Price</label>
+                    </div>
+                  </div>
+                <div class="center">
+                  <button class="btn waves-effect waves-light" type="submit" id="submitButton" onclick="submitProcter()">Add Movie
+                    </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  </section>
+    
+</body>
+<!-- j-query -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+ crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- coustomjs -->
+<script >
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.datepicker').datepicker();
+  });
+</script>
+</html>

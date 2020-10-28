@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HomePage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="homestyles.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Home Page for Movies">
+        <meta name="keywords" content="homepage,movies,cities,tickets,queries">
+        <meta name="author" content="Aditya Nalla">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="row">
+        <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./images/movie.png" alt="Movie Image" style="width: 286px; height: 180px;">
+            <div class="card-body">
+              <h5 class="card-title">Find out Some Movies...?</h5>
+              <p class="card-text">Wanna See the movies Available or wanna look at the list; Click Below</p>
+               <form action="moviesListServlet" method="get">
+              <input class="btn btn-primary" type="submit" value="Click Here">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./images/analytics.png" alt="Analytics Image" style="width: 286px; height: 180px;">
+            <div class="card-body">
+              <h5 class="card-title">Reports of films</h5>
+              <p class="card-text">Wanna Analyze the data of films and want to check out the top lists click below</p>
+               <form action="analyticsServlet" method="get">
+              <input class="btn btn-primary" type="submit" value="Click Here">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/bkm.png" alt="Card image cap" style="width: 286px; height: 180px;">
+              <div class="card-body">
+                <h5 class="card-title">Book a Film</h5>
+                <p class="card-text">Wanna Book A Seat for the film, Click below</p>
+                <input class="btn btn-primary" type="submit" value="Click Here">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/addmovie.png" alt="Card image cap" style="width: 286px; height: 180px;">
+              <div class="card-body">
+                <h5 class="card-title">Add Movie</h5>
+                <p class="card-text">Wanna Add some Movie Do it below</p>
+                <input class="btn btn-primary" type="submit" value="Click Here">
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
