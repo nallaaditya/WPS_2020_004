@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <title>Get Details Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./addDetails.css" />
+        <meta charset="UTF-8">
+        <meta name="description" content="Add details Page">
+        <meta name="author" content="Aditya Nalla">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body background="./winter1.png">
+        <div class="card card mainCardStyle " style="width: 25rem; ">
+            <div class="card-body ">
+              <h5 class="card-title">GetDetails</h5>
+              <form method="post" action="retrieveImg.jsp" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="empId">Enter Employee Id <p style="color: red; display: inline;">*</p></label>
+                  <input type="number" class="form-control" id="empId" aria-describedby="emailHelp" placeholder="Enter Your Id" required>
+                </div>
+                <div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Get Details</button>
+                   
+                    <a href="./index.html" class="btn btn-primary btn active" role="button" aria-pressed="true">Back to Main Page</a>
+                    
+                    
+                </div>    
+            </form>
+             
+            </div>
+          </div>
+       
+    </body>
+</htmL>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <title>Add Details Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./addDetails.css" />
+        <meta charset="UTF-8">
+        <meta name="description" content="Add details Page">
+        <meta name="author" content="Aditya Nalla">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body background="./winter1.png">
+        <div class="card card mainCardStyle " style="width: 25rem; ">
+            <div class="card-body ">
+              <h5 class="card-title">Add Details</h5>
+              <form mathod="post" action="insertion.jsp" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="empId">Employee Id <p style="color: red; display: inline;">*</p></label>
+                  <input type="number" class="form-control" id="empId" aria-describedby="emailHelp" placeholder="Enter Your Id" required>
+                </div>
+                <div class="form-group">
+                    <label for="empName">Name<p style="color: red; display: inline;">*</p></label>
+                    <input type="text" class="form-control" id="empName" aria-describedby="emailHelp" placeholder="Enter Your Name" required>
+                  </div>
+                <div class="form-group">
+                  <label for="empDob">Enter Your Date of Birth<p style="color: red; display: inline;">*</p></label>
+                  <input type="date" class="form-control" id="empDob" placeholder="D.O.B" required>
+                </div>
+                <div class="form-group">
+                    <label for="empImg">Upload your Image<p style="color: red; display: inline;">*</p></label>
+                    <input type="file" class="form-control" id="empImg" placeholder="D.O.B" required>
+                  </div>
+               
+                <div>
+                   
+                    <a href="./index.html" class="btn btn-primary btn active" role="button" aria-pressed="true">Back to Main Page</a>
+                    
+                    <button type="submit" class="btn btn-primary btnClass" style="margin-top: 20px;">Submit</button>
+
+                    
+                   
+                    
+                </div>    
+            </form>
+             
+            </div>
+          </div>
+       
+    </body>
+</htmL>
